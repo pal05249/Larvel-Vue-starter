@@ -25,9 +25,9 @@ use Illuminate\Http\Request;
 
 
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('auth.login');
-});
+})->middleware('guest');
 
 Auth::routes();
 
